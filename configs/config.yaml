@@ -1,0 +1,29 @@
+# Audio Processing Configuration
+audio:
+  sample_rate: 16000
+  duration_sec: 1.0
+  n_mfcc: 13
+  n_fft: 2048
+  hop_length: 512
+
+# Dataset & Train/Test Split Configuration
+dataset:
+  raw_dir: "data/raw"
+  manifest_path: "data/split_manifest.json"
+  feature_cache_path: "data/processed/mfcc_features.joblib"
+  test_size: 0.2
+  random_seed: 42
+
+# SVM Model Configuration
+model:
+  type: "SVM"
+  kernel: "rbf"
+  C: 10.0
+  gamma: "scale"
+  scaler: "StandardScaler"
+
+# Outputs & Metrics
+output:
+  model_path: "models/svm_baseline.joblib"
+  results_json: "results/svm_baseline_results.json"
+  confusion_matrix_png: "results/confusion_matrix_svm.png"

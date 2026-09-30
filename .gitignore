@@ -1,0 +1,41 @@
+# Data directories
+data/raw/
+data/processed/
+
+# Python cache & build outputs
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Model checkpoints & serialized artifacts
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.onnx
+
+# Keep trained models for reproducibility
+!models/cnn2d_best.pth
+!models/cnn2d_meta.json
+!models/svm_baseline.joblib
+
+# IDE and OS settings
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local dataset manifest backups
+data/split_manifest_corrected.json
+data/split_manifest_old.json
+data/split_manifest_parser_bug_backup.json
