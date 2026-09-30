@@ -1,36 +1,3 @@
-Yes — now I can see the problem clearly.
-
-Your **content is correct**, but the README currently has Markdown characters escaped or wrapped incorrectly. For example:
-
-```text
-**# Hindi Spoken Digit Recognition**
-```
-
-should be:
-
-```markdown
-# Hindi Spoken Digit Recognition
-```
-
-And:
-
-```text
-\- 20,174 labeled audio clips
-```
-
-should be:
-
-```markdown
-- 20,174 labeled audio clips
-```
-
-Also, your `How to Run` section lost its headings and code fences.
-
-### Let's fix it properly
-
-Don't try to manually clean all those `\` and `**` characters. **Replace the entire README with the version below.**
-
-````markdown
 # Hindi Spoken Digit Recognition
 
 A machine learning pipeline for classifying Hindi spoken digits (0-9) from speech audio using MFCC-based features, an RBF-SVM baseline, and a lightweight 2D convolutional neural network.
